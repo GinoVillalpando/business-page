@@ -1,15 +1,16 @@
 document.addEventListener('change', function(event) {
     let size = event.target;
     let item = event.target.value
-
-    console.log(size)
+    let textarea = document.getElementById("message")
+    let text = document.createTextNode("I want to buy: " + item + " size: " + size.name + " ");
 
     if(size.checked) {
         // Checkbox is checked..
-        let text = document.createTextNode("I want to buy: " + item + " size: "+ size.name + " ");
+        let textNode = textarea.appendChild(text).innerHTML;
 
-        document.getElementById("message").appendChild(text).innerHTML;
     } else {
-        alert("item unchecked")
+        // if the checkbox has been unchecked then replaces the textarea value with no value
+        this.location.reload(true);
+
     }
 });
