@@ -9,7 +9,7 @@ document.addEventListener('change', function(event) {
         let textNode = textarea.appendChild(text).innerHTML;
 
     } else {
-        // if the checkbox has been unchecked then replaces the textarea value with no value
+        // if the checkbox has been unchecked then reloads the location of the page
         this.location.reload(true);
 
     }
